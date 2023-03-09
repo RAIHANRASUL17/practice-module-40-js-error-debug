@@ -2,7 +2,8 @@
 /* ---------- add button part start --------*/    
 // get inputField
 const addInputField= document.getElementById('add-field')
-/*---------- add button part end --------*/   
+/*---------- add button part end --------*/ 
+
 /*__________ set golobal variable end   ______________*/ 
 function addItem(){
 const addInput=addInputField.value;
@@ -40,3 +41,21 @@ function changeColor(){
     }
 }
 
+
+
+// hide/show list
+function toggleButton(){
+    const listDiv= document.getElementById('list-div')
+   const toggle = document.getElementById("toggle-button");
+
+
+    if(listDiv.style.display == 'none'){
+        listDiv.style.display = 'block'
+        toggle.textContent = 'Hide-List'
+    }
+    else{
+        listDiv.style.display = "none";
+        toggle.textContent = "Show-List";
+    }
+
+}
