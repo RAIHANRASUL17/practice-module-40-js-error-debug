@@ -24,3 +24,18 @@ function removeItem(){
     let li = document.querySelector("li:last-child");
     itemList.removeChild(li)
 }
+
+// changeColor part
+function changeColor(){
+    // get inputfield
+    const colorInputField= document.getElementById('color-field')
+    colorInput = colorInputField.value;
+    colorInputField.value='';
+    // 
+    const List= document.querySelectorAll('li')
+    for(let i=0; i< List.length; i++){
+        // console.log(i)
+        // console.log(List[i])
+        List[i].style.color= colorInput;
+    }
+}
