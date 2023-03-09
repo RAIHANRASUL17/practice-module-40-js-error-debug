@@ -1,15 +1,27 @@
+/*__________ set golobal variable start ______________*/ 
+/* ---------- add button part start --------*/    
+// get inputField
+const addInputField= document.getElementById('add-field')
+/*---------- add button part end --------*/   
+/*__________ set golobal variable end   ______________*/ 
 
 function addItem(){
-    // console.log('set onclick add button is working or not , check')
-    // get inputField
-    const addInputField= document.getElementById('add-field')
-    const addInput=addInputField.value;
-    addInputField.value= ''
-    // step-1
+const addInput=addInputField.value;
+addInputField.value= ''
+// step-1
+const itemList = document.getElementById('item-list')
+//step-2 create li 
+const li =document.createElement('li');
+li.innerText= addInput;
+//step-3 set innerText
+itemList.appendChild(li);
+}
+
+
+function removeItem(){
+    // console.log('Bnt clicked is working or not')
+    // step-1:
     const itemList = document.getElementById('item-list')
-    //step-2 create li 
-    const li =document.createElement('li');
-    li.innerText= addInput;
-    //step-3 set innerText
-    itemList.appendChild(li);
+    let li = document.querySelector("li:last-child");
+    itemList.removeChild(li)
 }
